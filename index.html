@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Meter Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <div class="header-title">
+                    <i class="fas fa-bolt"></i>
+                    <h1>Electricity Meter Dashboard</h1>
+                </div>
+                <div class="theme-toggle">
+                    <button id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="card primary-card">
+                    <div class="card-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Remaining Balance</h3>
+                        <p class="stat-value" id="remainingBalance">Loading...</p>
+                        <span class="stat-label">Available Credit</span>
+                    </div>
+                </div>
+
+                <div class="card secondary-card">
+                    <div class="card-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Last Reading Time</h3>
+                        <p class="stat-value" id="readingTime">Loading...</p>
+                        <span class="stat-label">Meter Reading</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Last Recharge</h3>
+                        <p class="stat-value" id="rechargeAmount">Loading...</p>
+                        <span class="stat-label">Amount Recharged</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Recharge Date</h3>
+                        <p class="stat-value" id="rechargeDate">Loading...</p>
+                        <span class="stat-label">Last Transaction</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <div class="card info-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-info-circle"></i> Account Information</h3>
+                    </div>
+                    <div class="info-content">
+                        <div class="info-item">
+                            <span class="info-label">Account Number:</span>
+                            <span class="info-value" id="accountNumber">Loading...</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Last Updated:</span>
+                            <span class="info-value" id="lastUpdated">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button class="btn-refresh" id="refreshBtn">
+                    <i class="fas fa-sync-alt"></i>
+                    Refresh Data
+                </button>
+            </div>
+        </main>
+
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Loading meter data...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

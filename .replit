@@ -1,0 +1,11 @@
+run = "python scheduled_scraper.py"
+language = "python3"
+
+[nix]
+channel = "stable-23.05"
+
+[deployment]
+run = ["python", "scheduled_scraper.py"]
+
+[interpreter]
+command = ["python3", "-u", "scheduled_scraper.py"]
