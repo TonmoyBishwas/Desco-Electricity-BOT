@@ -1,0 +1,15 @@
+[phases.setup]
+nixPkgs = ['python310', 'chromium', 'chromedriver']
+
+[phases.install]
+cmds = ['pip install --no-cache-dir -r requirements.txt']
+
+[phases.build]
+cmds = ['echo "Build complete"']
+
+[start]
+cmd = 'python scheduled_scraper.py'
+
+[variables]
+NIXPACKS_PYTHON_VERSION = '3.10'
+PYTHONPATH = '/app'
