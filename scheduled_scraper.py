@@ -67,6 +67,14 @@ class ScheduledMeterScraper:
             time.sleep(60)  # Check every minute
 
 if __name__ == "__main__":
+    # Import keep_alive for Replit
+    try:
+        from keep_alive import keep_alive
+        keep_alive()  # Start web server to keep Repl alive
+        logging.info("Keep-alive server started for Replit")
+    except ImportError:
+        logging.info("Keep-alive not available (running locally)")
+    
     scheduler = ScheduledMeterScraper()
     
     # For testing - run once immediately

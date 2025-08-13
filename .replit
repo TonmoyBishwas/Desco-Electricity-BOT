@@ -1,11 +1,14 @@
-run = "python scheduled_scraper.py"
+run = "python main.py"
 language = "python3"
 
 [nix]
 channel = "stable-23.05"
 
 [deployment]
-run = ["python", "scheduled_scraper.py"]
+run = ["python", "main.py"]
 
 [interpreter]
-command = ["python3", "-u", "scheduled_scraper.py"]
+command = ["python3", "-u", "main.py"]
+
+[env]
+REPL_SLUG = "electricity-meter-bot"
