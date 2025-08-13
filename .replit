@@ -1,11 +1,11 @@
-run = "python main.py"
+run = "python3 main.py"
 language = "python3"
 
 [nix]
 channel = "stable-23.05"
 
 [deployment]
-run = ["python", "main.py"]
+run = ["python3", "main.py"]
 
 [interpreter]
 command = ["python3", "-u", "main.py"]
